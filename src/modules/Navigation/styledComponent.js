@@ -3,8 +3,11 @@ import styled from 'styled-components';
 
 export const StyledComponent = styled.header`
   position: sticky;
+  top: 0;
   padding: 0.8rem 2rem;
+  background-color: white;
   box-shadow: 0 4px 8px ${(props) => props.theme.color.medium};
+  z-index: 9999;
 
   nav {
     display: flex;

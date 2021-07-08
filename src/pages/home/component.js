@@ -6,7 +6,7 @@ import Banner from 'modules/Banner';
 import Card from 'modules/Card';
 
 // Images
-import img from 'img/toronto.jpg';
+import img from 'img/sample.jpg';
 
 import { StyledComponent } from './styledComponent';
 
@@ -24,11 +24,25 @@ const Home = () => (
         <Link to="/" className="button-light">View City</Link>
       </div>
     </Banner>
-    <div className="content-area">
+    <div className="content-area card-holder">
       <Card>
         <img src={img} alt="" />
         <div>
-          <h3>Heading Here</h3>
+          <h3>Modern Living</h3>
+          <p>Some text going here to illustrate a point!</p>
+        </div>
+      </Card>
+      <Card>
+        <img src={img} alt="" />
+        <div>
+          <h3>Modern Living</h3>
+          <p>Some text going here to illustrate a point!</p>
+        </div>
+      </Card>
+      <Card>
+        <img src={img} alt="" />
+        <div>
+          <h3>Modern Living</h3>
           <p>Some text going here to illustrate a point!</p>
         </div>
       </Card>

@@ -15,6 +15,17 @@ export const StyledComponent = styled.div`
     padding: 1rem;
   }
 
+  h3 {
+    display: inline-block;
+    margin: 0 0 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 4px solid ${(props) => props.theme.color.secondary}
+  }
+
+  p {
+    margin: 0;
+  }
+
   :hover {
     bottom: 1rem;
   }

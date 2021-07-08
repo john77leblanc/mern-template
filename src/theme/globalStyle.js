@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   img {
     width: 100%;
     height: auto;
+    display: block;
   }
 
   h1 {
@@ -47,6 +48,11 @@ const GlobalStyle = createGlobalStyle`
 
   .content-area {
     padding: 2rem 10%;
+  }
+
+  .card-holder {
+    display: flex;
+    justify-content: space-around;
   }
 `;
 
