@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const StyledComponent = styled.header`
   position: sticky;
   padding: 0.8rem 2rem;
-  box-shadow: 0 4px 8px var(--medium);
+  box-shadow: 0 4px 8px ${(props) => props.theme.color.medium};
 
   nav {
     display: flex;
@@ -34,7 +34,7 @@ export const StyledComponent = styled.header`
       content: "";
       position: absolute;
       height: 4px;
-      background-color: var(--color-1);
+      background-color: ${(props) => props.theme.color.primary};
       left: 15%;
       right: 15%;
       bottom: -50%;
