@@ -1,1 +1,1 @@
-export const APP_NAME = 'Loewen Kington';
+export const APP_NAME = 'Template';

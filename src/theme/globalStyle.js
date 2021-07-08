@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
   *:after {
     font-size: inherit;
     box-sizing: border-box;
+    transition: background-color 0.25s;
   }
 
   img {
@@ -24,8 +25,28 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${(props) => props.theme.font.secondary};
     font-size: 2rem;
     font-weight: 800;
-    text-align: center;
     color: ${(props) => props.theme.color.primary}
+  }
+
+  [class*="button"] {
+    display: inline-block;
+    border-radius: 8px;
+    text-decoration: none;
+    text-shadow: none;
+    padding: 0.8rem 2rem;
+  }
+
+  .button-light {
+    color: white;
+    background-color: ${(props) => props.theme.color.secondary};
+
+    :hover {
+      background-color: ${(props) => props.theme.color.primary}
+    }
+  }
+
+  .content-area {
+    padding: 2rem 10%;
   }
 `;
 

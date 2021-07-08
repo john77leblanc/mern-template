@@ -20,6 +20,7 @@ export const StyledComponent = styled.header`
     align-items: center;
     list-style: none;
     padding-inline-start: 0;
+    margin: 0;
   }
 
   .links li {
