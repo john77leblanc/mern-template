@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const http = require('http').Server(app);
 const cors = require('cors');
+const fs = require('fs');
 const path = require('path');
 
 
@@ -15,6 +16,16 @@ app.use(cors());
 
 app.get('/', (req, res) => {
   res.status(200).sendFile(path.join(publicDirectory, '/index.html'));
+});
+
+app.get('/cities', (req, res) => {
+  let data = JSON.parse(fs.readFileSync('db.json', 'utf8'));
+
+  if (req.query.id) {
+    data = data.find((i) => String(i.id) === String(req.query.id)) || 'Could not find ID.';
+  }
+
+  res.status(200).send(data);
 });
 
 app.get('*', (req, res) => {
