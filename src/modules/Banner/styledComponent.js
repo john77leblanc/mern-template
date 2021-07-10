@@ -6,6 +6,7 @@ export const StyledComponent = styled.div`
   position: relative;
   height: 500px;
   padding: 1rem 10%;
+  background-attachment: fixed;
   background-image: url(${img});
   background-size: cover;
   background-position: center;
