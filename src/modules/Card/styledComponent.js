@@ -24,6 +24,9 @@ export const StyledComponent = styled.div`
 
   p {
     margin: 0;
+    max-height: 5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   :hover {
