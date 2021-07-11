@@ -11,6 +11,7 @@ import Navigation from 'modules/Navigation';
 
 // Pages
 import Home from 'pages/home';
+import City from 'pages/city';
 
 import theme from 'theme/theme';
 
@@ -23,6 +24,7 @@ const Routes = (
         <Navigation />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/city/:id" component={City} />
         </Switch>
         <Footer />
       </ThemeProvider>

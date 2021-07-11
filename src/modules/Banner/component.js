@@ -1,17 +1,24 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { StyledComponent } from './styledComponent';
 
 
-const Banner = ({ children }) => (
+const Banner = ({ title, text }) => (
   <StyledComponent>
-    { children }
+    <div>
+      <h1>{ title }</h1>
+      <p>{ text }</p>
+      <br />
+      <Link className="button-light" to="/">Back</Link>
+    </div>
   </StyledComponent>
 );
 
 Banner.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default Banner;
