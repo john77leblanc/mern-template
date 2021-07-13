@@ -23,10 +23,21 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-family: ${(props) => props.theme.font.secondary};
+    font-size: 3rem;
+    font-weight: 800;
+    color: ${(props) => props.theme.color.primary};
+  }
+
+  h2 {
     font-size: 2rem;
     font-weight: 800;
-    color: ${(props) => props.theme.color.primary}
+    color: ${(props) => props.theme.color.secondary};
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: ${(props) => props.theme.color.medium};
   }
 
   [class*="button"] {
@@ -35,6 +46,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     text-shadow: none;
     padding: 0.8rem 2rem;
+  }
+
+  .background-light {
+    background-color: ${(props) => props.theme.background.light};
   }
 
   .button-light {
@@ -53,6 +68,10 @@ const GlobalStyle = createGlobalStyle`
   .card-holder {
     display: flex;
     justify-content: space-around;
+  }
+
+  .message-area {
+    padding: 5rem 10%;
   }
 `;
 

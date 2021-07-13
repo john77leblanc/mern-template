@@ -6,6 +6,10 @@ export default {
     medium: '#666666',
     dark: '#333333',
   },
+  background: {
+    light: '#DDF5F8',
+    dark: '#001524',
+  },
   font: {
     primary: '"Open Sans", Arial, Helvetica, sans-serif',
     secondary: '"Georgia", serif',
