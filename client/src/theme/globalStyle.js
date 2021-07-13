@@ -40,8 +40,13 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.color.medium};
   }
 
+  .m-auto {
+    margin: auto;
+  }
+
   [class*="button"] {
-    display: inline-block;
+    display: block;
+    width: max-content;
     border-radius: 8px;
     text-decoration: none;
     text-shadow: none;
