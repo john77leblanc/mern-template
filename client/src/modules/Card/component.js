@@ -6,21 +6,21 @@ import img from 'img/sample.jpg';
 import { StyledComponent } from './styledComponent';
 
 
-const Card = ({ id, title, text }) => (
-  <StyledComponent>
+const Card = ({ id, name, text }) => (
+  <StyledComponent id={id}>
     <img src={img} alt="" />
     <div>
-      <h3>{ title }</h3>
+      <h3>{ name }</h3>
       <p>{ text }</p>
       <br />
-      <Link className="button-light" to={`/city/${id}`}>Read More</Link>
+      <Link className="button-light" to={`/city/${name}`}>Read More</Link>
     </div>
   </StyledComponent>
 );
 
 Card.propTypes = {
   id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };
 

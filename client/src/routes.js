@@ -24,7 +24,7 @@ const Routes = (
         <Navigation />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/city/:id" component={City} />
+          <Route path="/city/:name" component={City} />
         </Switch>
         <Footer />
       </ThemeProvider>

@@ -37,7 +37,7 @@ const Home = () => {
           <Card
             key={city.id}
             id={city.id}
-            title={city.name}
+            name={city.name}
             text={city.description}
           />
         ))}

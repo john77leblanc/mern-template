@@ -24,6 +24,9 @@ app.get('/cities', (req, res) => {
   if (req.query.id) {
     data = data.find((i) => String(i.id) === String(req.query.id)) || 'Could not find ID.';
   }
+  else if (req.query.name) {
+    data = data.find((i) => String(i.name) === String(req.query.name)) || 'Could not find city name.';
+  }
 
   res.status(200).send(data);
 });

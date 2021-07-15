@@ -13,13 +13,13 @@ import { StyledComponent } from './styledComponent';
 
 
 const City = () => {
-  const { id } = useParams();
+  const { name } = useParams();
 
   const {
     data: city,
     isPending,
     error,
-  } = useFetch(`${SERVER}/cities?id=${id}`);
+  } = useFetch(`${SERVER}/cities?name=${name}`);
 
   return (
     <StyledComponent>
