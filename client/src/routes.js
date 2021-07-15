@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import AppContainer from 'AppContainer';
 
 // Modules
-import Footer from 'modules/Footer';
+// import Footer from 'modules/Footer';
 import Navigation from 'modules/Navigation';
 
 // Pages
@@ -26,7 +26,7 @@ const Routes = (
           <Route exact path="/" component={Home} />
           <Route path="/city/:name" component={City} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </AppContainer>
   </Router>

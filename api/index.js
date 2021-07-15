@@ -9,7 +9,7 @@ const path = require('path');
 
 
 const port = process.env.PORT || 8081;
-const publicDirectory = path.join(__dirname, '../public');
+const publicDirectory = path.join(__dirname, '../client/public');
 
 app.use(express.static(publicDirectory));
 app.use(cors());

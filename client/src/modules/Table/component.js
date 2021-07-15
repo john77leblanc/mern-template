@@ -5,20 +5,23 @@ import { StyledTable } from './styledTable';
 import Row from './Row';
 
 
-const Table = ({ headings, rows }) => (
-  <StyledTable>
-    <thead>
-      <Row data={headings} />
-    </thead>
-    <tbody>
-      { rows.map((row) => <Row data={row} />) }
-    </tbody>
-  </StyledTable>
-);
+const Table = ({ sales }) => {
+  const columns = sales.map((row, index) => sales.map((i) => i.prices[index]));
+
+  return (
+    <StyledTable>
+      <thead>
+        <Row data={sales.map((i) => i.year)} />
+      </thead>
+      <tbody>
+        { columns.map((column) => <Row data={column} />)}
+      </tbody>
+    </StyledTable>
+  );
+};
 
 Table.propTypes = {
-  headings: PropTypes.arrayOf(PropTypes.string).isRequired,
-  rows: PropTypes.arrayOf(PropTypes.object).isRequired,
+  sales: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Table;

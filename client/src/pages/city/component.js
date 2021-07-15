@@ -26,17 +26,24 @@ const City = () => {
       { isPending && <p>Loading city details...</p> }
       { error && <p>Error fetching city.</p> }
       {city && (
-        <Banner
-          title={city.name}
-          text={city.description}
-        />
+        <>
+          <Banner
+            title={city.name}
+            text={city.description}
+            img={`${process.env.PUBLIC_URL}/img/${city.img}`}
+          />
+          <div className="content-area">
+            <h2>Top Sales</h2>
+            <Table sales={city.details.sales} />
+            <br />
+            <Link to="/" className="button-light m-auto">Back to Cities</Link>
+          </div>
+          <div className="content-area background-light">
+            <h2>New Heading</h2>
+            <h3>Add some local images here next!</h3>
+          </div>
+        </>
       )}
-      <div className="content-area">
-        <h2>Table Data</h2>
-        <Table headings={['Heading 1', 'Heading 2', 'Heading 3']} rows={[[1, 2, 3], [4, 5, 6], [7, 8, 9]]} />
-        <br />
-        <Link to="/" className="button-light m-auto">Back to Cities</Link>
-      </div>
     </StyledComponent>
   );
 };

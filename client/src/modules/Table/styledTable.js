@@ -8,7 +8,12 @@ export const StyledTable = styled.table`
   text-align: center;
 
   thead {
-      font-weight: 600;
-      color: ${(props) => props.theme.color.secondary};
+    color: ${(props) => props.theme.color.secondary};
+    font-weight: 600;
+  }
+
+  tbody tr:first-child {
+    color: ${(props) => props.theme.color.primary};
+    font-weight: 600;
   }
 `;

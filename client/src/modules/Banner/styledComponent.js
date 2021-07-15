@@ -1,15 +1,18 @@
 import styled from 'styled-components';
-import img from 'img/toronto.jpg';
 
+
+const height = '500px';
 
 export const StyledComponent = styled.div`
   position: relative;
-  height: 500px;
+  height: ${height};
   padding: 1rem 10%;
   background-attachment: fixed;
-  background-image: url(${img});
+  background-color: ${(props) => props.theme.color.primary};
+  background-image: url(${(props) => props.img});
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 
   display: flex;
   flex-direction: flex-start;

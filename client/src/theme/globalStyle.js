@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${(props) => props.theme.font.primary};
     margin: 0;
     padding: 0;
+    min-height: 100vh;
   }
 
   *,
@@ -14,6 +15,24 @@ const GlobalStyle = createGlobalStyle`
     font-size: inherit;
     box-sizing: border-box;
     transition: background-color 0.25s;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  main {
+    animation: fadein 0.5s;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 
   img {

@@ -39,6 +39,7 @@ const Home = () => {
             id={city.id}
             name={city.name}
             text={city.description}
+            img={`${process.env.PUBLIC_URL}/img/${city.img}`}
           />
         ))}
       </div>
