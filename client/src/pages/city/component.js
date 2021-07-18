@@ -6,6 +6,7 @@ import useFetch from 'customHooks/useFetch';
 
 // Modules
 import Banner from 'modules/Banner';
+import ImageBubble from 'modules/ImageBubble';
 import Table from 'modules/Table';
 
 import { SERVER } from 'constants.js';
@@ -39,8 +40,12 @@ const City = () => {
             <Link to="/" className="button-light m-auto">Back to Cities</Link>
           </div>
           <div className="content-area background-light">
-            <h2>New Heading</h2>
-            <h3>Add some local images here next!</h3>
+            <h2>Come Visit</h2>
+            <h3>Here are some local images!</h3>
+            <div className="d-flex">
+              {city.details.imgs.map((img) => (
+                <ImageBubble key={img} img={`${process.env.PUBLIC_URL}/img/${img}`} />))}
+            </div>
           </div>
         </>
       )}

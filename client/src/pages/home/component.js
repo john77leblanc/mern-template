@@ -30,7 +30,7 @@ const Home = () => {
           companies. React can be used as a base in the development of single-page or mobile applications.
         </h3>
       </div>
-      <div className="content-area card-holder">
+      <div className="content-area d-flex">
         { isPending && <p>Loading city details...</p> }
         { error && <p>Error fetching city.</p> }
         {cities && cities.map((city) => (

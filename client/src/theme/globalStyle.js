@@ -89,7 +89,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 2rem 10%;
   }
 
-  .card-holder {
+  .d-flex {
     display: flex;
     justify-content: space-around;
   }
