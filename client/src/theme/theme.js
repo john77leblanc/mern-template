@@ -15,4 +15,5 @@ export default {
     secondary: '"Georgia", serif',
   },
   contrast: 0.4,
+  overlay: 'rgba(30,30,30,0.7)',
 };

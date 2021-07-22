@@ -35,6 +35,11 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  button {
+    border: none;
+    cursor: pointer;
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -96,6 +101,24 @@ const GlobalStyle = createGlobalStyle`
 
   .message-area {
     padding: 5rem 10%;
+  }
+
+  form {
+    [type="text"] {
+      border: 2px solid ${(props) => props.theme.color.light};
+      border-radius: 3px;
+      width: 100%;
+      padding: 10px;
+      transition: border 0.25s;
+      
+      :hover {
+        border-color: ${(props) => props.theme.color.secondary}
+      }
+
+      :focus {
+        border-color: ${(props) => props.theme.color.secondary}
+      }
+    }
   }
 `;
 

@@ -5,7 +5,7 @@ import { StyledComponent } from './styledComponent';
 
 
 const ImageBubble = ({ img }) => (
-  <StyledComponent src={img} />
+  <StyledComponent src={img} loading="lazy" alt="" />
 );
 
 ImageBubble.propTypes = {

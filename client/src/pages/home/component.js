@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Custom Hooks
 import useFetch from 'customHooks/useFetch';
 
 // Modules
 import Card from 'modules/Card';
+import Modal from 'modules/Modal';
 
 import { SERVER } from 'constants.js';
 import { StyledComponent } from './styledComponent';
@@ -16,6 +17,16 @@ const Home = () => {
     isPending,
     error,
   } = useFetch(`${SERVER}/cities`);
+
+  const [displayModal, setDisplayModal] = useState(false);
+
+  const openModal = () => {
+    setDisplayModal(true);
+  };
+
+  const closeModal = () => {
+    setDisplayModal(false);
+  };
 
   return (
     <StyledComponent>
@@ -42,6 +53,20 @@ const Home = () => {
             img={`${process.env.PUBLIC_URL}/img/${city.img}`}
           />
         ))}
+      </div>
+      <div className="content-area">
+        <button className="button-light m-auto" type="button" onClick={openModal}>Add City</button>
+        { displayModal && (
+          <Modal title="Add City" close={closeModal}>
+            <form>
+              <h4>City Name</h4>
+              <input id="name" type="text" />
+
+              <h4>Description</h4>
+              <textarea id="description" type="text" />
+            </form>
+          </Modal>
+        )}
       </div>
     </StyledComponent>
   );
