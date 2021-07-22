@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 
 export const StyledComponent = styled.div`
+  animation: fadein 0.25s;
   background-color: ${(props) => props.theme.overlay};
+  backdrop-filter: blur(4px);
   position: fixed;
   top: 4rem;
   right: 0;

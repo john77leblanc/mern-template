@@ -26,6 +26,28 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  @keyframes floatin {
+    from {
+      bottom: -1rem;
+      opacity: 0;
+    }
+    to {
+      opacity {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .fade-in {
+    animation: fadein 0.5s;
+  }
+
+  .float-in {
+    position: relative;
+    animation: floatin 1s;
+  }
+
   main {
     animation: fadein 0.5s;
   }
