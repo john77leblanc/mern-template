@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const StyledComponent = styled.div`
   background-color: ${(props) => props.theme.overlay};
   position: fixed;
-  top: 0;
+  top: 4rem;
   right: 0;
   bottom: 0;
   left: 0;
@@ -18,7 +18,13 @@ export const StyledComponent = styled.div`
     border-radius: 5px;
     width: 100%;
     max-width: 600px;
+    max-height: 100%;
+    overflow-y: scroll;
     padding: 2rem;
+
+    ::-webkit-scrollbar {
+      width: 0;
+    }
 
     h3 {
       border-bottom: 3px solid ${(props) => props.theme.color.primary};
@@ -26,7 +32,7 @@ export const StyledComponent = styled.div`
       margin-top: 0;
     }
 
-    button {
+    #close {
       float: right;
       color: inherit;
       background-color: inherit;

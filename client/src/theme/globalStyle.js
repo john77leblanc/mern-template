@@ -40,6 +40,26 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  form {
+    [type="text"] {
+      border: 2px solid ${(props) => props.theme.color.light};
+      border-radius: 3px;
+      font-family: inherit;
+      width: 100%;
+      outline: none;
+      padding: 10px;
+      transition: border 0.25s;
+      
+      :hover {
+        border-color: ${(props) => props.theme.color.medium}
+      }
+
+      :focus {
+        border-color: ${(props) => props.theme.color.secondary}
+      }
+    }
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -64,11 +84,16 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.color.medium};
   }
 
+  label {
+    display: inline-block;
+  }
+
   .m-auto {
     margin: auto;
   }
 
   [class*="button"] {
+    cursor: pointer;
     display: block;
     width: max-content;
     border-radius: 8px;
@@ -101,24 +126,6 @@ const GlobalStyle = createGlobalStyle`
 
   .message-area {
     padding: 5rem 10%;
-  }
-
-  form {
-    [type="text"] {
-      border: 2px solid ${(props) => props.theme.color.light};
-      border-radius: 3px;
-      width: 100%;
-      padding: 10px;
-      transition: border 0.25s;
-      
-      :hover {
-        border-color: ${(props) => props.theme.color.secondary}
-      }
-
-      :focus {
-        border-color: ${(props) => props.theme.color.secondary}
-      }
-    }
   }
 `;
 

@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 // Custom Hooks
 import useFetch from 'customHooks/useFetch';
 
+// Forms
+import AddCity from 'forms/AddCity';
+
 // Modules
 import Card from 'modules/Card';
 import Modal from 'modules/Modal';
@@ -58,13 +61,7 @@ const Home = () => {
         <button className="button-light m-auto" type="button" onClick={openModal}>Add City</button>
         { displayModal && (
           <Modal title="Add City" close={closeModal}>
-            <form>
-              <h4>City Name</h4>
-              <input id="name" type="text" />
-
-              <h4>Description</h4>
-              <textarea id="description" type="text" />
-            </form>
+            <AddCity />
           </Modal>
         )}
       </div>
