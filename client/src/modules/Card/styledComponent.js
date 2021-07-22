@@ -43,9 +43,15 @@ export const StyledComponent = styled.div`
 
   p {
     margin: 0;
-    max-height: 5rem;
-    text-overflow: ellipsis;
+    max-height: 4rem;
     overflow: hidden;
+  }
+
+  .elipses {
+    display: block;
+    color: ${(props) => props.theme.color.medium};
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   :hover {

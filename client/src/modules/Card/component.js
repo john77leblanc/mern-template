@@ -18,8 +18,8 @@ const Card = ({
       <div>
         <h3>{ name }</h3>
         <p>{ text }</p>
-        <br />
-        <Link className="button-light" to={`/city/${name}`}>Read More</Link>
+        <span className="elipses">...</span>
+        <span className="button-light">Read More</span>
       </div>
     </StyledComponent>
   </Link>
