@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 
   @keyframes floatin {
     from {
-      bottom: -1rem;
+      bottom: -2rem;
       opacity: 0;
     }
     to {
@@ -45,6 +45,7 @@ const GlobalStyle = createGlobalStyle`
 
   .float-in {
     position: relative;
+    bottom: 0;
     animation: floatin 1s;
   }
 

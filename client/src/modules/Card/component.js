@@ -11,7 +11,7 @@ const Card = ({
   text,
   img,
 }) => (
-  <Link to={`/city/${name}`}>
+  <Link to={`/city/${name}`} className="float-in">
     <StyledComponent id={id}>
       <img src={img} alt={`City of ${name}`} height="10rem" loading="lazy" />
       <div>

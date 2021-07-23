@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 
-export const StyledComponent = styled.form`
-  button {
+export const StyledComponent = styled.div`
+  #remove {
     position: relative;
     padding: 0;
     border: 4px solid ${(props) => props.theme.color.light};
@@ -37,5 +37,14 @@ export const StyledComponent = styled.form`
     width: 10rem;
     height: 5rem;
     object-fit: cover;
+  }
+
+  hr {
+    border: 2px solid ${(props) => props.theme.color.light};
+    margin: 1rem 0;
+  }
+
+  [type="submit"] {
+    border: none;
   }
 `;
