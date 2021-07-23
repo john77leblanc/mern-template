@@ -2,17 +2,18 @@ const express = require('express');
 
 
 const app = express();
-const http = require('http').Server(app);
 const cors = require('cors');
 const fs = require('fs');
+const http = require('http').Server(app);
 const path = require('path');
 
 
 const port = process.env.PORT || 8081;
 const publicDirectory = path.join(__dirname, '../client/public');
 
-app.use(express.static(publicDirectory));
 app.use(cors());
+app.use(express.static(publicDirectory));
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.status(200).sendFile(path.join(publicDirectory, '/index.html'));
@@ -33,6 +34,11 @@ app.get('/cities', (req, res) => {
 
 app.get('*', (req, res) => {
   res.status(404).send('Page not found');
+});
+
+app.post('/add-city', (req, res) => {
+  console.log(req.body);
+  res.status(200).send({message: 'Received!'});
 });
 
 http.listen(port, () => console.log('App listening on port', port));

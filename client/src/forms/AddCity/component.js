@@ -38,7 +38,7 @@ const AddCity = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const send = {};
+    const data = { name, description };
 
     const abortCont = new AbortController();
 
@@ -46,7 +46,7 @@ const AddCity = () => {
       method: 'POST',
       signal: abortCont.signal,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(send),
+      body: JSON.stringify(data),
     }).then((response) => {
       console.log(response);
     });
